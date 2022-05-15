@@ -3,28 +3,28 @@
 #include "lib.h"
 using namespace std;
 
-void init(char mat[4][5]){
-    for(int i=0;i<4;i++){
-        for(int j=0;j<5;j++){
+void init(char mat[10][20]){
+    for(int i=0;i<10;i++){
+        for(int j=0;j<20;j++){
             mat[i][j] = ' ';
         }
     }
 }
 
-void init(char ar[5]){
-    for(int i=0; i<5;i++){
+void init(char ar[20]){
+    for(int i=0; i<20;i++){
         ar[i] = ' ';
     }
 }
 
-void init (char [4][5]);
-void init (char [5]);
-int ricerca (char [4][5], char [5]);
+void init (char [10][20]);
+void init (char [20]);
+int ricerca (char [10][20], char [20]);
 
-int ricerca(char nomi[4][5], char seleziona[5]){
-    for(int i=0; i<4; i++){
+int ricerca(char nomi[10][20], char seleziona[20]){
+    for(int i=0; i<10; i++){
         int a=0;
-        for(int j=0;j<5; j++){
+        for(int j=0;j<20; j++){
             if(nomi[i][j]==seleziona[j]){
                 a++;
             }
@@ -32,7 +32,7 @@ int ricerca(char nomi[4][5], char seleziona[5]){
                 break;
             }
         }
-        if(a==5){
+        if(a==20){
             return i;
         }
     }
@@ -41,15 +41,12 @@ int ricerca(char nomi[4][5], char seleziona[5]){
 
 
 int main(){
-    char lista[4][5];
-    char cerca[5];
+    char lista[10][20];
+    char cerca[20];
     init (lista);
     init (cerca);
-    for (int i=0; i<4; i++){
+    for (int i=0; i<10; i++){
         cin >> lista [i];
-    }
-    for (int i=0; i<4; i++){
-        cout <<lista[i];
     }
     cin>>cerca;
     int posizione= ricerca(lista, cerca);
