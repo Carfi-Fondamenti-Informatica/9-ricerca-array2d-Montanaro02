@@ -1,24 +1,24 @@
 
 #include "lib.h"
 
-void init(char mat[4][5]){
-    for(int i=0;i<4;i++){
-        for(int j=0;j<5;j++){
+void init(char mat[10][20]){
+    for(int i=0;i<10;i++){
+        for(int j=0;j<20;j++){
             mat[i][j] = ' ';
         }
     }
 }
 
-void init(char ar[5]){
-    for(int i=0; i<5;i++){
+void init(char ar[20]){
+    for(int i=0; i<20;i++){
         ar[i] = ' ';
     }
 }
 
-int ricerca(char nomi[4][5], char seleziona[5]){
-    for(int i=0; i<4; i++){
+int ricerca(char nomi[10][20], char seleziona[20]){
+    for(int i=0; i<10; i++){
         int a=0;
-        for(int j=0;j<5; j++){
+        for(int j=0;j<20; j++){
             if(nomi[i][j]==seleziona[j]){
                 a++;
             }
@@ -26,7 +26,7 @@ int ricerca(char nomi[4][5], char seleziona[5]){
                 break;
             }
         }
-        if(a==5){
+        if(a==20){
             return i;
         }
     }
