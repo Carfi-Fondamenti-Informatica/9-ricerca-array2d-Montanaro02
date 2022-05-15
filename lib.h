@@ -1,4 +1,4 @@
 
-void init (char [4][5]);
-void init (char [5]);
-int ricerca (char [4][5], char [5]);
+void init (char [10][20]);
+void init (char [20]);
+int ricerca (char [10][20], char [20]);
