@@ -1,5 +1,6 @@
 
 #include <iostream>
+#include "lib.h"
 using namespace std;
 
 void init(char mat[4][5]){
